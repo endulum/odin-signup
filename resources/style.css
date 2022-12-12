@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+
+form {
+  border: 1px solid red;
+  width: 400px;
+  padding: 10px;
+}
+form button {
+  width: 100%;
+}
+
+form ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  row-gap: 10px;
+  margin-bottom: 20px;
+}
+form ul li input {
+  margin-top: 5px;
+  width: 100%;
+}/*# sourceMappingURL=style.css.map */
