@@ -19,12 +19,29 @@ form ul {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  -moz-column-gap: 10px;
-       column-gap: 10px;
-  row-gap: 10px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  row-gap: 15px;
   margin-bottom: 20px;
 }
 form ul li input {
-  margin-top: 5px;
+  margin-bottom: 5px;
   width: 100%;
+  border: none;
+  border-bottom: 1px dashed gray;
+}
+form ul li input:focus-visible {
+  border-bottom: 1px solid black;
+  outline: none;
+}
+form ul li input + small {
+  visibility: hidden;
+}
+form ul li input:focus + small {
+  visibility: visible;
+}
+
+input[required] ~ label::after {
+  content: "*";
+  color: red;
 }/*# sourceMappingURL=style.css.map */

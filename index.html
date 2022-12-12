@@ -11,28 +11,33 @@
     <form>
         <ul>
             <li>
+                
+                <input type="text" id="firstName" name="firstName" required>
                 <label for="firstName">First Name</label>
-                <input type="text" id="firstName" name="firstName">
             </li>
             <li>
-                <label for="lastName">Last Name</label>
                 <input type="text" id="lastName" name="lastName">
+                <label for="lastName">Last Name</label>
             </li>
             <li>
-                <label for="email">E-mail Address</label>
-                <input type="email" id="email" name="email">
+                <input type="email" id="email" name="email" placeholder="username@domain.com" required>
+                <label for="email">E-mail Address</label><br>
+                <small>Please write in the format shown</small>
             </li>
             <li>
-                <label for="phoneNumber">Phone Number</label>
-                <input type="tel" id="phoneNumber" name="phoneNumber">
+                <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="###-###-####" pattern="^[1-9]\d{2}[ |-]\d{3}[ |-]\d{4}">
+                <label for="phoneNumber">Phone Number</label><br>
+                <small>Please write in the format shown</small>
             </li>
             <li>
-                <label for="passwd">Choose a Password</label>
-                <input type="password" id="passwd" name="passwd">
+                <input type="password" id="passwd" name="passwd" minlength="8" required>
+                <label for="passwd">Choose a Password</label><br>
+                <small>Must be at least 8 characters long</small>
             </li>
             <li>
-                <label for="confirmPass">Re-type Password</label>
-                <input type="password" id="confirmPass" name="confirmPass">
+                <input type="password" id="confirmPass" name="confirmPass" required>
+                <label for="confirmPass">Re-type Password</label><br>
+                <small>Must match chosen password</small>
             </li>
         </ul>
         <button>Submit</button>
