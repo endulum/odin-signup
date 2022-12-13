@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "LibreBaskerville";
+  src: url(LibreBaskerville.ttf);
+}
+@font-face {
+  font-family: "WorkSans";
+  src: url(WorkSans.ttf);
+}
 * {
   box-sizing: border-box;
 }
@@ -13,17 +21,7 @@ aside {
   position: relative;
   background: url(david.jpg) center;
   background-size: cover;
-  width: 50%;
-}
-aside h1 {
-  background-color: rgba(255, 255, 255, 0.25);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
-  color: black;
-  margin: 0;
-  padding: 25px;
-  font-size: 5rem;
-  text-align: center;
+  width: 80%;
 }
 aside small {
   position: absolute;
@@ -31,16 +29,18 @@ aside small {
   text-align: center;
   bottom: 10px;
   color: white;
+  font: 0.6rem "LibreBaskerville", serif;
+}
+aside small a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
 }
 
 main {
-  background-color: white;
-  padding: 25px;
+  background: url(dust.jpeg) repeat;
   width: 100%;
-}
-main h1, main h2 {
-  margin: 0;
-  padding: 0;
+  overflow: hidden;
 }
 
 aside, main {
@@ -51,14 +51,18 @@ aside, main {
 }
 
 form {
+  background-color: #fff;
   width: 100%;
-  padding: 10px;
+  padding: 25px;
+  padding-bottom: 40px;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.15), 0px 1px 2px rgba(0, 0, 0, 0.25);
 }
 form button {
   width: 100%;
 }
 
 fieldset {
+  position: relative;
   border: 1px solid black;
   margin: 0;
   padding: 25px;
@@ -68,15 +72,22 @@ fieldset {
   grid-template-rows: repeat(3, 1fr);
   -moz-column-gap: 30px;
        column-gap: 30px;
-  row-gap: 15px;
-  margin-bottom: 20px;
+  row-gap: 5px;
+}
+fieldset legend {
+  font: 2.05rem "WorkSans", sans-serif;
+  padding: 0 10px;
+  margin-left: -12px;
 }
 fieldset div input {
   background: transparent;
   margin-bottom: 5px;
+  margin-top: 5px;
   width: 100%;
   border: none;
-  border-bottom: 1px dashed gray;
+  border-bottom: 1px dashed rgb(69, 69, 69);
+  padding: 0 0 5px 0;
+  color: gray;
 }
 fieldset div input:focus-visible {
   border-bottom: 1px solid black;
@@ -91,4 +102,38 @@ fieldset div input:focus + label + br + small {
 fieldset div input[required] ~ label::after {
   content: " *";
   color: red;
+}
+fieldset div, fieldset div input {
+  font: 0.75rem LibreBaskerville, serif;
+}
+fieldset button {
+  position: absolute;
+  bottom: -15px;
+  right: 12px;
+  width: 150px;
+  height: 35px;
+  background-color: #000;
+  border: none;
+  padding: 0;
+  font: 1.25rem "WorkSans", sans-serif;
+  color: white;
+}
+fieldset button::before, fieldset button::after {
+  position: absolute;
+  top: 0;
+  width: 10px;
+  height: 35px;
+  background-color: white;
+  content: "";
+}
+fieldset button::before {
+  left: 0;
+}
+fieldset button::after {
+  right: 0;
+}
+fieldset #req {
+  position: absolute;
+  left: 25px;
+  font-style: italic;
 }/*# sourceMappingURL=style.css.map */
